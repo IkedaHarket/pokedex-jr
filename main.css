@@ -3,6 +3,7 @@ body{
     max-width: 100vw;
     max-height: 100vh;
     font-family: 'Secular One', sans-serif;
+    overflow-x: hidden;
     color: #414141;
 }
 .menu-desplegable{
@@ -185,7 +186,7 @@ body{
     border: none;
     cursor: pointer;
     display: flex;
-    padding: 0;
+    padding: 0 20px 0 0;
     z-index: 1000;
   }
   .line {
