@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeswet</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./search.css">
+</head>
+<body>
+    <header id="header">
+        <div class="arrow">
+            
+        </div>
+        <nav id="nav">
+            <button class="menu-btn" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+
+            <div class="menu-desplegable">
+                <img src="../assets/imgs/pokemon-logo.png" alt="imgMenu">
+                <ul>
+                    <li class="menu-item-selected">Pokedex</li> 
+                    <li>Habitat</li> 
+                    <li>Tipos</li> 
+                    <li>Items</li> 
+                    <li>Comida</li>
+                </ul>
+                <div class="menu-desplegable-filter"></div>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li class="menu-item-selected">Pokedex</li> 
+                    <li>Habitat</li> 
+                    <li>Tipos</li> 
+                    <li>Items</li> 
+                    <li>Comida</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="title">
+        <h2>Pokedex</h2>
+    </section>
+    <template id="cardPokemon">
+        <div class="cardPokemon">
+            <div class="cardPokemon__info">
+                <h6></h6>
+                <div class="cardPokemon__types">
+                    
+                </div>
+            </div>
+            <img class="cardPokemon__img" alt="pokemon">
+        </div>
+    </template>
+    <div id="results"></div>
+
+    <!-- Paginador -->
+    <div class="wrapper">
+        <svg id="btnPrev" width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+            </g>
+        </svg>
+        <svg id="btnNext" width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g>
+                <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+            </g>
+        </svg>
+    </div>
+    <!--END Paginador -->
+
+    <img id="imgBallBackground" src="../assets/imgs/pokeball-icon-png-27.jpeg" alt="pokeball">
+    <script src="../main.js"></script>
+    <script src="./search.js"></script>
+</body>
+</html>
