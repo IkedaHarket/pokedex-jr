@@ -183,7 +183,7 @@ body{
   .menu-btn {
     background-color: transparent;
     position: relative;
-    right: 16px;
+    right: 1.3em;
     border: none;
     cursor: pointer;
     display: flex;
